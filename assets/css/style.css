@@ -1,106 +1,117 @@
-/* 基本字体和背景设置 */
+/* 基础字体和背景设置 */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f3; /* 更柔和的浅灰色背景 */
-  color: #333; /* 深灰色文字，低调且清晰 */
+  background-color: #f0f2f5;
+  color: #3a3a3a;
   margin: 0;
   padding: 0;
-}
-
-/* 居中容器 */
-.container {
-  max-width: 960px; /* 增大最大宽度，以便适应更宽的页面 */
-  margin: 0 auto;   /* 水平居中 */
-  padding: 20px;    /* 内边距 */
+  line-height: 1.6;           /* 行距 */
 }
 
 /* 链接样式 */
 a {
-  color: #64748b; /* 柔和的蓝灰色链接 */
+  color: #3a7cae;
   text-decoration: none;
 }
 
 a:hover {
-  color: #475569; /* 鼠标悬停时较深的蓝灰色 */
+  color: #2a6a9e;
   text-decoration: underline;
 }
 
-/* 页头样式 */
+/* 页眉样式 */
 header {
-  background-color: #475569;  /* 低调的蓝灰色背景 */
+  background: linear-gradient(to right, #4a586e, #394958);
   color: white;
-  padding: 20px 0;
+  padding: 40px 20px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 柔和阴影效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
 }
 
 header h1 {
   font-size: 2.5rem;
   margin: 0;
+  font-family: 'Roboto', sans-serif; /* 自定义字体 */
+  font-weight: 700;
 }
 
-/* 页面标题和副标题 */
-h1, h2, h3 {
-  color: #333; /* 深灰色标题 */
-  font-weight: normal;
-}
-
-/* 主体区域 */
+/* 主体内容样式 */
 main {
-  padding: 20px;
-  background-color: #ffffff; /* 白色背景 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* 浅灰色阴影 */
+  padding: 40px;
+  max-width: 80%;             /* 主体内容最大宽度为页面的 80% */
+  margin: 20px auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加柔和阴影 */
+  text-align: justify;         /* 文本左右对齐 */
 }
 
-/* 导航栏优化 */
+/* 标题样式 */
+h1, h2, h3 {
+  color: #333333;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+/* 段落样式 */
+p {
+  line-height: 1.8;           /* 增加行距 */
+  margin-bottom: 20px;        /* 段落间距 */
+  max-width: 75%;             /* 文字块宽度 */
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* 导航栏样式 */
 nav ul {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 0;
   list-style: none;
-}
-
-nav ul li {
-  margin: 0 10px;
+  gap: 20px;
 }
 
 nav ul li a {
-  font-size: 18px;
+  color: #dcdcdc;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-nav ul li a:hover {
-  color: #3a4754;
-}
-
-/* 教程部分 */
-.tutorial-category {
-  margin-bottom: 40px;
-}
-
-.tutorial-category h4 {
-  font-size: 22px;
-  color: #3a4754;
-  margin-bottom: 10px;
-}
-
-.tutorial-category ul {
-  padding-left: 20px;
-}
-
-.tutorial-category ul li {
-  font-size: 18px;
-}
-
-.tutorial-category ul li a {
-  color: #64748b;
+/* 图片样式 */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;          /* 图片上下居中 */
+  border-radius: 5px;         /* 添加圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
 }
 
 /* 页脚样式 */
 footer {
-  background-color: #475569;
-  color: white;
+  background: linear-gradient(to right, #4a586e, #394958);
+  color: #dcdcdc;
   text-align: center;
   padding: 20px;
+  font-family: 'Arial', sans-serif;
 }
 
 footer p {
@@ -110,24 +121,16 @@ footer p {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 10px 0;
+  main {
+    padding: 20px 10px;
+    max-width: 95%;
   }
 
   header h1 {
     font-size: 2rem;
   }
 
-  .tutorial-category h4 {
-    font-size: 20px;
+  p {
+    font-size: 1rem;
   }
 }
