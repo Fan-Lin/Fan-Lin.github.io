@@ -1,30 +1,30 @@
 /* 基本字体和背景设置 */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9; /* 背景颜色为浅灰白色，增加可读性 */
-  color: #333333; /* 设置深灰色文字，确保高对比度，清晰易读 */
+  background-color: #f4f4f9; /* 浅灰色背景，避免太亮，增加舒适感 */
+  color: #333333; /* 深灰色文字，清晰且舒适 */
   margin: 0;
   padding: 0;
 }
 
 /* 设置链接的样式 */
 a {
-  color: #6A1E9C; /* 紫色链接，保持一致性 */
+  color: #4A90E2; /* 柔和的蓝色链接 */
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #9B30FF; /* 鼠标悬停时，链接颜色更浅紫 */
+  color: #1A73E8; /* 鼠标悬停时，变为较亮的蓝色 */
 }
 
 /* 页头样式 */
 header {
-  background-color: #6A1E9C; /* 紫色背景 */
+  background-color: #6A737D; /* 低调的深灰蓝色背景 */
   color: white; /* 白色文字 */
   padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 加入柔和的阴影 */
 }
 
 header h1 {
@@ -34,7 +34,8 @@ header h1 {
 
 /* 页面内容 */
 h1, h2, h3 {
-  color: #6A1E9C; /* 使用紫色标题 */
+  color: #333333; /* 深灰色标题 */
+  font-weight: normal;
 }
 
 /* 主体区域 */
@@ -42,12 +43,12 @@ main {
   padding: 40px 20px;
   max-width: 1000px;
   margin: 0 auto;
-  background-color: #ffffff; /* 内容区域背景为白色，增加对比度 */
+  background-color: #ffffff; /* 内容区域背景为白色 */
 }
 
 /* 主页链接按钮样式 */
 button {
-  background-color: #6A1E9C; /* 紫色按钮 */
+  background-color: #4A90E2; /* 柔和的蓝色按钮 */
   color: white;
   padding: 10px 20px;
   border: none;
@@ -56,13 +57,13 @@ button {
 }
 
 button:hover {
-  background-color: #9B30FF; /* 按钮悬停时变为浅紫色 */
+  background-color: #1A73E8; /* 按钮悬停时变为亮蓝色 */
 }
 
 /* 页脚样式 */
 footer {
-  background-color: #6A1E9C; /* 紫色背景 */
-  color: white; /* 白色文字 */
+  background-color: #6A737D; /* 与header一致的深灰蓝色背景 */
+  color: white;
   text-align: center;
   padding: 15px;
   position: relative;
