@@ -1,5 +1,6 @@
 title: Fan-Lin's Blog
 description: 这是一个教程网站，包含了很多有用的信息。
+markdown: kramdown  # 使用 kramdown 来渲染 Markdown 文件
 theme: minima  # 使用 GitHub Pages 默认的 minima 主题
 url: "https://fan-lin.github.io"  # 网站的 URL
 baseurl: ""  # 如果是个人页则为空，如果是项目页，设置为"/仓库名"
