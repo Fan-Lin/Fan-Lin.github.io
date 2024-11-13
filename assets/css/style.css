@@ -20,7 +20,7 @@ a:hover {
 
 /* 页头样式 */
 header {
-  background-color: #6A1E9C; /* 紫色背景 */
+  background-color: #6A1E9C; /* 深紫色背景 */
   color: white;
   padding: 20px;
   text-align: center;
@@ -57,6 +57,7 @@ main {
   padding: 40px 20px;
   max-width: 1000px;
   margin: 0 auto;
+  background-color: #f0f0f0; /* 内容区域浅灰色背景 */
 }
 
 /* 主页链接按钮样式 */
@@ -75,11 +76,11 @@ button:hover {
 
 /* 页脚样式 */
 footer {
-  background-color: #6A1E9C; /* 紫色背景 */
+  background-color: #6A1E9C; /* 深紫色背景 */
   color: white;
   text-align: center;
   padding: 15px;
-  position: absolute;
+  position: relative;
   width: 100%;
   bottom: 0;
 }
