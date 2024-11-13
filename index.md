@@ -3,7 +3,7 @@ layout: default
 title: 首页
 ---
 
-# 欢迎来到我的 GitHub Pages 网站
+# 欢迎来到 Fan-Lin
 
 这里是我的个人教程网站，包含了很多有用的信息和学习资源。
 
