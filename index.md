@@ -9,8 +9,6 @@ title: 首页
 
 ![欢迎图片](assets/images/logo.png)
 
-## 动画效果
-
 <div data-aos="fade-up">
   <h2>滚动动画</h2>
   <p>这个段落会在页面滚动时渐显出现。</p>

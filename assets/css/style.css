@@ -1,26 +1,26 @@
 /* 基本字体和背景设置 */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f7f7f7; /* 背景颜色为浅灰色 */
-  color: #4B0082; /* 紫色文字 */
+  background-color: #f4f4f9; /* 背景颜色为非常浅的灰色，提升对比度 */
+  color: #4B0082; /* 紫色文字，确保对比度足够 */
   margin: 0;
   padding: 0;
 }
 
 /* 设置链接的样式 */
 a {
-  color: #8A2BE2; /* 紫色链接 */
+  color: #6A1E9C; /* 紫色链接 */
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #6A1E9C; /* 鼠标悬停时，颜色变深 */
+  color: #9B30FF; /* 鼠标悬停时，颜色变成浅紫色 */
 }
 
 /* 页头样式 */
 header {
-  background-color: #6A1E9C; /* 深紫色背景 */
+  background-color: #7B68EE; /* 更柔和的紫色背景，避免过于深沉 */
   color: white;
   padding: 20px;
   text-align: center;
@@ -49,7 +49,7 @@ header nav ul li a {
 
 /* 页面内容 */
 h1, h2, h3 {
-  color: #6A1E9C; /* 标题颜色为深紫色 */
+  color: #6A1E9C; /* 标题颜色为柔和紫色 */
 }
 
 /* 主体区域 */
@@ -57,12 +57,12 @@ main {
   padding: 40px 20px;
   max-width: 1000px;
   margin: 0 auto;
-  background-color: #f0f0f0; /* 内容区域浅灰色背景 */
+  background-color: #ffffff; /* 内容区域背景为白色，更加清晰 */
 }
 
 /* 主页链接按钮样式 */
 button {
-  background-color: #8A2BE2; /* 紫色按钮 */
+  background-color: #6A1E9C; /* 按钮背景色为柔和紫色 */
   color: white;
   padding: 10px 20px;
   border: none;
@@ -71,12 +71,12 @@ button {
 }
 
 button:hover {
-  background-color: #6A1E9C; /* 按钮悬停时变为深紫色 */
+  background-color: #9B30FF; /* 按钮悬停时变为浅紫色 */
 }
 
 /* 页脚样式 */
 footer {
-  background-color: #6A1E9C; /* 深紫色背景 */
+  background-color: #7B68EE; /* 更柔和的紫色背景 */
   color: white;
   text-align: center;
   padding: 15px;
