@@ -7,11 +7,6 @@ title: 首页
 
 这里是我的个人教程网站，包含了很多有用的信息和学习资源。
 
-## 本站特色
-
-- **Jekyll 主题**：本站使用简单而美观的 Jekyll 主题。
-- **自定义样式**：使用了 Google 字体、Font Awesome 图标库、和 AOS 动画。
-
 ![欢迎图片](assets/images/logo.png)
 
 ## 动画效果
