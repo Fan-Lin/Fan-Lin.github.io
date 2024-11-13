@@ -24,7 +24,11 @@ title: 首页
 
 #### Git
 
-##### [Git Brief](tutorials/Gitbrief.md) ##### [Git菜鸟教程](tutorials/Git菜鸟教程.md) ##### [PR提交问题合集](tutorials/PR提交问题合集.md)
+##### [Git Brief](tutorials/Gitbrief.md)
+
+##### [Git菜鸟教程](tutorials/Git菜鸟教程.md)
+
+##### [PR提交问题合集](tutorials/PR提交问题合集.md)
 
 #### LaTeX
 
