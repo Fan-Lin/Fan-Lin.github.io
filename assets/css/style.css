@@ -1,0 +1,43 @@
+/* 使用 Google Fonts 设置网站的字体 */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: #34495e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #34495e;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 设置滚动动画 */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+}
