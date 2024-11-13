@@ -1,0 +1,6 @@
+title: 我的 GitHub Pages 网站
+description: 这是一个教程网站，包含了很多有用的信息。
+theme: minima  # 使用 GitHub Pages 默认的 minima 主题
+url: "https://fan-lin.github.io"  # 网站的 URL
+baseurl: ""  # 如果是个人页则为空，如果是项目页，设置为"/仓库名"
+permalink: /:year/:month/:day/:title/  # 设置网址的显示格式
