@@ -1,90 +1,85 @@
 /* 基本字体和背景设置 */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9; /* 浅灰色背景，避免太亮，增加舒适感 */
-  color: #333333; /* 深灰色文字，清晰且舒适 */
+  background-color: #f0f0f3; /* 更柔和的浅灰色背景 */
+  color: #333; /* 深灰色文字，低调且清晰 */
   margin: 0;
   padding: 0;
 }
 
-/* 设置链接的样式 */
+/* 居中容器 */
+.container {
+  max-width: 960px; /* 增大最大宽度，以便适应更宽的页面 */
+  margin: 0 auto;   /* 水平居中 */
+  padding: 20px;    /* 内边距 */
+}
+
+/* 链接样式 */
 a {
-  color: #4A90E2; /* 柔和的蓝色链接 */
+  color: #64748b; /* 柔和的蓝灰色链接 */
   text-decoration: none;
 }
 
 a:hover {
+  color: #475569; /* 鼠标悬停时较深的蓝灰色 */
   text-decoration: underline;
-  color: #1A73E8; /* 鼠标悬停时，变为较亮的蓝色 */
 }
 
 /* 页头样式 */
 header {
-  background-color: #4A90E2;  /* 更柔和的蓝色背景 */
+  background-color: #475569;  /* 低调的蓝灰色背景 */
   color: white;
-  padding: 40px 20px;
+  padding: 20px 0;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 加入柔和的阴影 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 柔和阴影效果 */
 }
 
 header h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 0;
 }
 
-/* 页面内容 */
+/* 页面标题和副标题 */
 h1, h2, h3 {
-  color: #333333; /* 深灰色标题 */
+  color: #333; /* 深灰色标题 */
   font-weight: normal;
 }
 
 /* 主体区域 */
 main {
-  padding: 40px 20px;
-  max-width: 1200px;         /* 增大最大宽度 */
-  margin: 0 auto;            /* 水平居中 */
+  padding: 20px;
   background-color: #ffffff; /* 白色背景 */
-}
-
-/* 图片优化 */
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 20px auto; /* 图片上下居中 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* 浅灰色阴影 */
 }
 
 /* 导航栏优化 */
 nav ul {
   display: flex;
-  justify-content: center;   /* 水平居中 */
+  justify-content: center;
   padding: 0;
   list-style: none;
 }
 
 nav ul li {
-  margin: 0 15px;            /* 每个导航项之间增加左右间距 */
+  margin: 0 10px;
 }
 
 nav ul li a {
-  color: #4A90E2;
   font-size: 18px;
-  text-decoration: none;
 }
 
 nav ul li a:hover {
-  color: #1A73E8;            /* 鼠标悬停时改变颜色 */
-  text-decoration: underline;
+  color: #3a4754;
 }
 
 /* 教程部分 */
 .tutorial-category {
-  margin-bottom: 40px;        /* 每个教程分类底部留出空间 */
+  margin-bottom: 40px;
 }
 
 .tutorial-category h4 {
-  font-size: 24px;
-  color: #333;
+  font-size: 22px;
+  color: #3a4754;
   margin-bottom: 10px;
 }
 
@@ -97,21 +92,15 @@ nav ul li a:hover {
 }
 
 .tutorial-category ul li a {
-  color: #4A90E2;
-}
-
-.tutorial-category ul li a:hover {
-  text-decoration: underline;
+  color: #64748b;
 }
 
 /* 页脚样式 */
 footer {
-  background-color: #4A90E2;  /* 与 header 一致的蓝色背景 */
+  background-color: #475569;
   color: white;
   text-align: center;
   padding: 20px;
-  position: relative;
-  width: 100%;
 }
 
 footer p {
@@ -119,36 +108,26 @@ footer p {
   font-size: 14px;
 }
 
-/* 让页面底部始终在页面底部 */
-html, body {
-  height: 100%;
-}
-
-footer {
-  position: relative;
-  bottom: 0;
-}
-
 /* 响应式设计 */
 @media (max-width: 768px) {
-  main {
-    padding: 20px 10px;        /* 增加内边距，使内容更贴近 */
+  .container {
+    padding: 10px;
   }
 
   nav ul {
-    flex-direction: column;    /* 导航栏垂直排列 */
-    align-items: center;       /* 居中 */
+    flex-direction: column;
+    align-items: center;
   }
 
   nav ul li {
-    margin: 10px 0;            /* 增加上下间距 */
+    margin: 10px 0;
   }
 
   header h1 {
-    font-size: 2rem;           /* 减小标题字体 */
+    font-size: 2rem;
   }
 
   .tutorial-category h4 {
-    font-size: 20px;           /* 减小教程标题字体 */
+    font-size: 20px;
   }
 }
