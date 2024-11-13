@@ -1,43 +1,99 @@
-/* 使用 Google Fonts 设置网站的字体 */
+/* 基本字体和背景设置 */
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7; /* 背景颜色为浅灰色 */
+  color: #4B0082; /* 紫色文字 */
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2 {
-  color: #2c3e50;
-}
-
+/* 设置链接的样式 */
 a {
-  color: #3498db;
+  color: #8A2BE2; /* 紫色链接 */
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #6A1E9C; /* 鼠标悬停时，颜色变深 */
 }
 
+/* 页头样式 */
 header {
-  background-color: #34495e;
+  background-color: #6A1E9C; /* 紫色背景 */
   color: white;
   padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* 页面内容 */
+h1, h2, h3 {
+  color: #6A1E9C; /* 标题颜色为深紫色 */
+}
+
+/* 主体区域 */
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 主页链接按钮样式 */
+button {
+  background-color: #8A2BE2; /* 紫色按钮 */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6A1E9C; /* 按钮悬停时变为深紫色 */
+}
+
+/* 页脚样式 */
+footer {
+  background-color: #6A1E9C; /* 紫色背景 */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* 让页面底部始终在页面底部 */
+html, body {
+  height: 100%;
 }
 
 footer {
-  background-color: #34495e;
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
-
-/* 设置滚动动画 */
-[data-aos="fade-up"] {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-[data-aos="fade-up"].aos-animate {
-  opacity: 1;
+  position: relative;
+  bottom: 0;
 }
