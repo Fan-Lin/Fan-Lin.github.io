@@ -38,6 +38,10 @@ title: 首页
 
 ##### [CS50课后作业](tutorials/CS50课后作业.md)
 
+#### Visio
+
+##### [安装 Visio](tutorials/安装Visio.md)
+
 #### Vlookup
 
 ##### [Vlookup](tutorials/vlookup.md)
