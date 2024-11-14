@@ -17,12 +17,12 @@
    - 访问 [Office Tool Plus 官网](https://otp.landian.vip/zh-cn/) 下载并解压安装包。
    - 解压后，双击打开 **Office Tool Plus** 应用程序。
 
-2. **下行 KMS 激活工具**
+2. **下载 KMS 激活工具**
    - 下载 [神龙 KMS 激活工具](https://wwhl.lanzouw.com/i0ok10ijmo7g)。
 
 3. **确认 Microsoft 365 版本**
    - 打开任意 **Microsoft Office** 应用（如 **Word** 或 **Excel**）。
-   - 在应用程序启动时，查看页面加载界面中的版本信息，例如：`Office 20XX`。请记录下您的版本号以供后续操作参考。
+   - 在应用程序启动时，查看页面加载界面中的版本信息，例如：**Office 20XX**。请记录下您的版本号以供后续操作参考。
    - **重要提示**：为了避免兼容性问题，请确保安装的 **Visio** 版本与已安装的 **Microsoft Office** 版本一致。如果您安装的是 **Office 2019**，请确保选择对应版本的 **Visio**，以保证两者能够兼容运行。本教程以 **Office 2019** 为例。
 
 ## 安装 Visio
