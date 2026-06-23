@@ -1,6 +1,6 @@
 /* 基本字体和背景设置 */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   background-color: #f0f0f3; /* 更柔和的浅灰色背景 */
   color: #333; /* 深灰色文字，低调且清晰 */
   margin: 0;
@@ -50,9 +50,8 @@ main {
   padding: 20px;
   background-color: #ffffff; /* 白色背景 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* 浅灰色阴影 */
-  max-width: 80%; /* 主体内容最大宽度为页面的 80% */
-  margin: 0 auto;
-  text-align: justify; /* 文本左右对齐 */
+  max-width: 860px;
+  margin: 20px auto;
 }
 
 /* 导航栏优化 */

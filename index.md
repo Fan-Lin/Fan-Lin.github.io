@@ -3,57 +3,27 @@ layout: default
 title: 首页
 ---
 
-## 欢迎来到 Fan-Lin
+## 欢迎来到 Fan-Lin 的学习空间
 
-这里是我的个人教程网站，包含了很多有用的信息和学习资源。
-
-![欢迎图片](assets/images/logo.png)
-
-### 导航
-
-- [教程](tutorials/)
-- [关于我](https://github.com/Fan-Lin)
-- [参考书籍](#参考书籍)
-- [随想](#随想)
+这里收录了我学习过程中整理的笔记与教程。
 
 ---
 
-### 教程合集
+### Git / 版本控制
 
-在这里，你可以找到不同的编程教程和技术资源，帮助你快速上手并深入学习各种编程语言和工具。
+- [Git Brief](tutorials/Gitbrief.md)
+- [Git 菜鸟教程](tutorials/Git菜鸟教程.md)
+- [PR 提交问题合集](tutorials/PR提交问题合集.md)
 
-#### Git
+### LaTeX
 
-##### [Git Brief](tutorials/Gitbrief.md)
+- [LaTeX 语法学习](tutorials/LaTeX语法学习.md)
 
-##### [Git菜鸟教程](tutorials/Git菜鸟教程.md)
+### Python
 
-##### [PR提交问题合集](tutorials/PR提交问题合集.md)
+- [CS50 课后作业](tutorials/CS50课后作业.md)
 
-#### LaTeX
+### 工具
 
-##### [LaTeX语法学习](tutorials/LaTeX语法学习.md)
-
-#### Python
-
-##### [CS50课后作业](tutorials/CS50课后作业.md)
-
-#### Visio
-
-##### [安装 Visio](tutorials/安装Visio.md)
-
-#### Vlookup
-
-##### [Vlookup](tutorials/vlookup.md)
-
----
-
-### 参考书籍
-
-等待更新……
-
-### 随想
-
-Loading...
-
-感谢访问我的网站，欢迎留言和讨论！
+- [安装 Visio](tutorials/安装Visio.md)
+- [Vlookup](tutorials/vlookup.md)
