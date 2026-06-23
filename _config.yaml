@@ -1,13 +1,14 @@
 title: Fan-Lin
 description: 个人教程与学习笔记
-markdown: kramdown
 url: "https://fan-lin.github.io"
 baseurl: ""
 
-navbar:
-  - text: 首页
-    url: /
-  - text: 教程
-    url: /tutorials/Gitbrief
-  - text: GitHub
-    url: https://github.com/Fan-Lin
+remote_theme: just-the-docs/just-the-docs
+
+color_scheme: default
+search_enabled: true
+heading_anchors: true
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag

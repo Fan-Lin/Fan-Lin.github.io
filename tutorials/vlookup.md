@@ -1,4 +1,11 @@
-# vlookup
+---
+layout: default
+title: Vlookup
+parent: 教程
+nav_order: 7
+---
+
+# Vlookup
 
 表头在上面，找列。
 

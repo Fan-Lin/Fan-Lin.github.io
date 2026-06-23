@@ -1,4 +1,11 @@
-# Q & A
+---
+layout: default
+title: PR 提交问题合集
+parent: 教程
+nav_order: 3
+---
+
+# PR 提交问题合集
 
 ## 如何删除 commit 里 merge 的提交内容
 

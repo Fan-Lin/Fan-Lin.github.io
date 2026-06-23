@@ -1,4 +1,11 @@
-# 安装 Visio 教程
+---
+layout: default
+title: 安装 Visio
+parent: 教程
+nav_order: 6
+---
+
+# 安装 Visio
 
 本教程将指导您在已安装 **Microsoft 365** 的基础上，使用 **Office Tool Plus** 工具安装并激活 **Visio**。请按照以下步骤操作，以确保顺利完成安装过程。
 

@@ -1,4 +1,11 @@
-# <center>Git 简略版</center>
+---
+layout: default
+title: Git 简略版
+parent: 教程
+nav_order: 1
+---
+
+# Git 简略版
 
 ## 本地仓库命令操作
 

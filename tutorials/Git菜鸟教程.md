@@ -1,4 +1,11 @@
-# <center>Git摸索</center>
+---
+layout: default
+title: Git 菜鸟教程
+parent: 教程
+nav_order: 2
+---
+
+# Git 菜鸟教程
 
 ## 安装配置
 <span style="background-color: #66CDAA">git config</mark>

@@ -1,4 +1,11 @@
-# <center>LaTeX学习</center>
+---
+layout: default
+title: LaTeX 语法学习
+parent: 教程
+nav_order: 4
+---
+
+# LaTeX 语法学习
 ## 基础格式
 
 \documentclass[[a4paper](#options),11pt]{[article](#article)}  
