@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fan-Lin</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -19,6 +20,7 @@
     --nav-hover:     #2a2d2e;
     --nav-active-bg: #094771;
     --card-bg:       #2d2d2d;
+    --code-bg:       #2d2d2d;
   }
 
   body {
@@ -53,6 +55,7 @@
     font-weight: 600;
     color: #fff;
     text-decoration: none;
+    cursor: pointer;
   }
 
   .site-desc {
@@ -76,7 +79,6 @@
     font-size: 13px;
     outline: none;
   }
-
   .search-wrap input::placeholder { color: var(--text-dim); }
   .search-wrap input:focus { border-color: var(--accent); }
 
@@ -97,14 +99,10 @@
     color: var(--text);
     text-decoration: none;
     font-size: 14px;
+    cursor: pointer;
   }
-
   .nav-item:hover { background: var(--nav-hover); }
-
-  .nav-item.active {
-    background: var(--nav-active-bg);
-    color: #fff;
-  }
+  .nav-item.active { background: var(--nav-active-bg); color: #fff; }
 
   .nav-children .nav-item {
     padding-left: 28px;
@@ -113,11 +111,15 @@
     border-left: 2px solid var(--border);
     margin-left: 16px;
   }
-
   .nav-children .nav-item:hover {
     border-left-color: var(--accent);
     color: var(--text);
     background: var(--nav-hover);
+  }
+  .nav-children .nav-item.active {
+    border-left-color: var(--accent);
+    background: var(--nav-active-bg);
+    color: #fff;
   }
 
   .sidebar-footer {
@@ -126,7 +128,6 @@
     font-size: 12px;
     color: var(--text-dim);
   }
-
   .sidebar-footer a { color: var(--text-dim); text-decoration: none; }
   .sidebar-footer a:hover { color: var(--accent); }
 
@@ -148,15 +149,13 @@
     color: var(--text-dim);
     gap: 6px;
   }
+  .topbar a { color: var(--link); text-decoration: none; cursor: pointer; }
+  .topbar span { color: var(--text-dim); }
 
-  .topbar a { color: var(--link); text-decoration: none; }
+  .content { max-width: 820px; padding: 48px 36px; }
 
-  .content {
-    max-width: 820px;
-    padding: 48px 36px;
-  }
-
-  h1 {
+  /* ── Homepage ── */
+  .home-title {
     font-size: 26px;
     font-weight: 600;
     color: #fff;
@@ -165,21 +164,20 @@
     margin-bottom: 20px;
   }
 
-  h2 {
-    font-size: 15px;
+  .home-desc { color: var(--text-dim); margin-bottom: 8px; }
+
+  .section-label {
+    font-size: 11px;
     font-weight: 700;
     color: var(--accent);
     text-transform: uppercase;
-    letter-spacing: .06em;
-    margin: 36px 0 12px;
+    letter-spacing: .08em;
+    margin: 32px 0 10px;
   }
 
-  p { color: var(--text-dim); margin-bottom: 20px; }
-
-  /* ── Cards ── */
   .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 10px;
   }
 
@@ -188,55 +186,83 @@
     border: 1px solid var(--border);
     border-radius: 6px;
     padding: 16px;
-    text-decoration: none;
-    color: var(--text);
-    transition: border-color .12s, background .12s;
     cursor: pointer;
+    transition: border-color .12s, background .12s;
   }
+  .card:hover { border-color: var(--accent); background: #333; }
+  .card-name { font-size: 14px; font-weight: 500; color: #fff; margin-bottom: 5px; }
+  .card-tag  { font-size: 11px; color: var(--text-dim); font-family: 'Consolas', monospace; }
 
-  .card:hover {
-    border-color: var(--accent);
-    background: #333;
+  /* ── Markdown ── */
+  .md-body h1 {
+    font-size: 24px; font-weight: 600; color: #fff;
+    padding-bottom: 12px; border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
   }
-
-  .card-name {
-    font-size: 14px;
-    font-weight: 500;
-    color: #fff;
-    margin-bottom: 5px;
+  .md-body h2 {
+    font-size: 18px; font-weight: 600; color: var(--accent);
+    margin: 28px 0 10px;
   }
-
-  .card-tag {
-    font-size: 11px;
-    color: var(--text-dim);
-    font-family: 'Consolas', monospace;
+  .md-body h3 {
+    font-size: 15px; font-weight: 600; color: #ccc;
+    margin: 20px 0 8px;
   }
+  .md-body p  { margin-bottom: 14px; }
+  .md-body ul, .md-body ol { padding-left: 24px; margin-bottom: 14px; }
+  .md-body li { margin-bottom: 4px; }
+  .md-body a  { color: var(--link); }
+  .md-body a:hover { text-decoration: underline; }
+  .md-body code {
+    background: var(--code-bg); padding: 2px 6px;
+    border-radius: 3px; font-family: 'Consolas', monospace;
+    font-size: 13px; color: #ce9178;
+  }
+  .md-body pre {
+    background: var(--code-bg); border: 1px solid var(--border);
+    border-radius: 6px; padding: 16px; margin-bottom: 16px;
+    overflow-x: auto;
+  }
+  .md-body pre code {
+    background: none; padding: 0; color: #d4d4d4; font-size: 13px;
+  }
+  .md-body blockquote {
+    border-left: 3px solid var(--accent); padding-left: 16px;
+    color: var(--text-dim); margin-bottom: 14px;
+  }
+  .md-body table {
+    border-collapse: collapse; width: 100%; margin-bottom: 16px; font-size: 14px;
+  }
+  .md-body th, .md-body td {
+    border: 1px solid var(--border); padding: 8px 12px; text-align: left;
+  }
+  .md-body th { background: #2a2a2a; color: #fff; }
+  .md-body hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
 </style>
 </head>
 <body>
 
 <aside class="sidebar">
   <div class="sidebar-header">
-    <a href="#" class="site-title">Fan-Lin</a>
+    <div class="site-title" onclick="showHome()">Fan-Lin</div>
     <div class="site-desc">个人教程与学习笔记</div>
   </div>
 
   <div class="search-wrap">
-    <input type="text" placeholder="搜索…">
+    <input type="text" placeholder="搜索…" oninput="filterNav(this.value)">
   </div>
 
   <nav>
-    <a href="#" class="nav-item active">首页</a>
+    <div class="nav-item active" id="nav-home" onclick="showHome()">首页</div>
 
     <div class="nav-label">教程</div>
     <div class="nav-children">
-      <a href="#" class="nav-item">Git 简略版</a>
-      <a href="#" class="nav-item">Git 菜鸟教程</a>
-      <a href="#" class="nav-item">PR 提交问题合集</a>
-      <a href="#" class="nav-item">LaTeX 语法学习</a>
-      <a href="#" class="nav-item">CS50 课后作业</a>
-      <a href="#" class="nav-item">安装 Visio</a>
-      <a href="#" class="nav-item">Vlookup</a>
+      <div class="nav-item" data-file="tutorials/Gitbrief.md"       data-title="Git 简略版"      onclick="loadTutorial(this)">Git 简略版</div>
+      <div class="nav-item" data-file="tutorials/Git菜鸟教程.md"    data-title="Git 菜鸟教程"    onclick="loadTutorial(this)">Git 菜鸟教程</div>
+      <div class="nav-item" data-file="tutorials/PR提交问题合集.md" data-title="PR 提交问题合集" onclick="loadTutorial(this)">PR 提交问题合集</div>
+      <div class="nav-item" data-file="tutorials/LaTeX语法学习.md"  data-title="LaTeX 语法学习"  onclick="loadTutorial(this)">LaTeX 语法学习</div>
+      <div class="nav-item" data-file="tutorials/CS50课后作业.md"   data-title="CS50 课后作业"   onclick="loadTutorial(this)">CS50 课后作业</div>
+      <div class="nav-item" data-file="tutorials/安装Visio.md"      data-title="安装 Visio"      onclick="loadTutorial(this)">安装 Visio</div>
+      <div class="nav-item" data-file="tutorials/vlookup.md"        data-title="Vlookup"         onclick="loadTutorial(this)">Vlookup</div>
     </div>
   </nav>
 
@@ -246,55 +272,95 @@
 </aside>
 
 <div class="main">
-  <div class="topbar">
-    <a href="#">首页</a>
+  <div class="topbar" id="topbar">
+    <a onclick="showHome()">首页</a>
   </div>
-
-  <div class="content">
-    <h1>欢迎来到 Fan-Lin 的学习空间</h1>
-    <p>这里收录了我学习过程中整理的笔记与教程，使用左侧导航栏浏览内容。</p>
-
-    <h2>Git / 版本控制</h2>
-    <div class="cards">
-      <a href="#" class="card">
-        <div class="card-name">Git 简略版</div>
-        <div class="card-tag">git</div>
-      </a>
-      <a href="#" class="card">
-        <div class="card-name">Git 菜鸟教程</div>
-        <div class="card-tag">git</div>
-      </a>
-      <a href="#" class="card">
-        <div class="card-name">PR 提交问题合集</div>
-        <div class="card-tag">git</div>
-      </a>
-    </div>
-
-    <h2>工具 / 办公</h2>
-    <div class="cards">
-      <a href="#" class="card">
-        <div class="card-name">LaTeX 语法学习</div>
-        <div class="card-tag">latex</div>
-      </a>
-      <a href="#" class="card">
-        <div class="card-name">安装 Visio</div>
-        <div class="card-tag">visio</div>
-      </a>
-      <a href="#" class="card">
-        <div class="card-name">Vlookup</div>
-        <div class="card-tag">excel</div>
-      </a>
-    </div>
-
-    <h2>编程</h2>
-    <div class="cards">
-      <a href="#" class="card">
-        <div class="card-name">CS50 课后作业</div>
-        <div class="card-tag">python · c</div>
-      </a>
-    </div>
-  </div>
+  <div class="content" id="content"></div>
 </div>
 
+<script>
+var HOME_HTML = '\
+  <div class="home-title">欢迎来到 Fan-Lin 的学习空间</div>\
+  <p class="home-desc">这里收录了我学习过程中整理的笔记与教程，使用左侧导航栏浏览内容。</p>\
+  <div class="section-label">Git / 版本控制</div>\
+  <div class="cards">\
+    <div class="card" onclick="loadTutorialByFile(\'tutorials/Gitbrief.md\',\'Git 简略版\')">\
+      <div class="card-name">Git 简略版</div><div class="card-tag">git</div></div>\
+    <div class="card" onclick="loadTutorialByFile(\'tutorials/Git菜鸟教程.md\',\'Git 菜鸟教程\')">\
+      <div class="card-name">Git 菜鸟教程</div><div class="card-tag">git</div></div>\
+    <div class="card" onclick="loadTutorialByFile(\'tutorials/PR提交问题合集.md\',\'PR 提交问题合集\')">\
+      <div class="card-name">PR 提交问题合集</div><div class="card-tag">git</div></div>\
+  </div>\
+  <div class="section-label">工具 / 办公</div>\
+  <div class="cards">\
+    <div class="card" onclick="loadTutorialByFile(\'tutorials/LaTeX语法学习.md\',\'LaTeX 语法学习\')">\
+      <div class="card-name">LaTeX 语法学习</div><div class="card-tag">latex</div></div>\
+    <div class="card" onclick="loadTutorialByFile(\'tutorials/安装Visio.md\',\'安装 Visio\')">\
+      <div class="card-name">安装 Visio</div><div class="card-tag">visio</div></div>\
+    <div class="card" onclick="loadTutorialByFile(\'tutorials/vlookup.md\',\'Vlookup\')">\
+      <div class="card-name">Vlookup</div><div class="card-tag">excel</div></div>\
+  </div>\
+  <div class="section-label">编程</div>\
+  <div class="cards">\
+    <div class="card" onclick="loadTutorialByFile(\'tutorials/CS50课后作业.md\',\'CS50 课后作业\')">\
+      <div class="card-name">CS50 课后作业</div><div class="card-tag">python · c</div></div>\
+  </div>';
+
+function setActiveNav(file) {
+  document.querySelectorAll('.nav-item').forEach(function(el) { el.classList.remove('active'); });
+  if (!file) { document.getElementById('nav-home').classList.add('active'); return; }
+  document.querySelectorAll('.nav-item[data-file]').forEach(function(el) {
+    if (el.dataset.file === file) el.classList.add('active');
+  });
+}
+
+function setTopbar(title) {
+  var tb = document.getElementById('topbar');
+  tb.innerHTML = title
+    ? '<a onclick="showHome()">首页</a><span>›</span><span>' + title + '</span>'
+    : '<a onclick="showHome()">首页</a>';
+}
+
+function showHome() {
+  document.getElementById('content').innerHTML = HOME_HTML;
+  setActiveNav(null);
+  setTopbar(null);
+}
+
+function loadTutorial(el) {
+  loadTutorialByFile(el.dataset.file, el.dataset.title);
+}
+
+function loadTutorialByFile(file, title) {
+  setActiveNav(file);
+  setTopbar(title);
+  document.getElementById('content').innerHTML = '<p style="color:var(--text-dim);padding:20px 0">加载中…</p>';
+  fetch(file)
+    .then(function(r) { if (!r.ok) throw new Error('404'); return r.text(); })
+    .then(function(md) {
+      md = md.replace(/^---[\s\S]*?---\n*/, '');
+      md = md.replace(/<\/?center>/g, '');
+      var div = document.createElement('div');
+      div.className = 'md-body';
+      div.innerHTML = marked.parse(md);
+      var c = document.getElementById('content');
+      c.innerHTML = '';
+      c.appendChild(div);
+    })
+    .catch(function() {
+      document.getElementById('content').innerHTML =
+        '<p style="color:var(--text-dim);padding:20px 0">本地预览不支持 fetch，上线后可正常访问。</p>';
+    });
+}
+
+function filterNav(q) {
+  q = q.trim().toLowerCase();
+  document.querySelectorAll('.nav-item[data-file]').forEach(function(el) {
+    el.style.display = (!q || el.textContent.toLowerCase().includes(q)) ? '' : 'none';
+  });
+}
+
+showHome();
+</script>
 </body>
 </html>
